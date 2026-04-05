@@ -2,31 +2,47 @@
 <html>
 <head>
   <title>GetYourUGC</title>
+
   <style>
     body {
-      background-color: #121212;
+      margin: 0;
+      background: #0f0f0f;
+      font-family: 'Segoe UI', sans-serif;
       color: white;
-      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
+      width: 350px;
       text-align: center;
-      padding: 50px;
     }
 
     h1 {
-      font-size: 40px;
+      margin-bottom: 10px;
+      font-size: 28px;
     }
 
     p {
       color: #aaa;
+      margin-bottom: 25px;
     }
 
     input, textarea {
-      width: 300px;
-      padding: 10px;
-      margin: 10px;
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
       border: none;
-      border-radius: 5px;
-      background: #1e1e1e;
+      border-radius: 8px;
+      background: #262626;
       color: white;
+      font-size: 14px;
     }
 
     textarea {
@@ -34,35 +50,56 @@
       resize: none;
     }
 
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 5px #4CAF50;
+    }
+
     button {
-      padding: 10px 20px;
-      background: #4CAF50;
+      width: 100%;
+      padding: 12px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #4CAF50, #2ecc71);
       color: white;
+      font-size: 16px;
       cursor: pointer;
+      transition: 0.3s;
     }
 
     button:hover {
-      background: #45a049;
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 12px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-  <h1>GetYourUGC 🚀</h1>
-  <p>Submit your UGC file below!</p>
+  <div class="container">
+    <h1>GetYourUGC !</h1>
+    <p>Submit your Roblox UGC easily</p>
 
-  <form action="https://formspree.io/f/mkoppawp" method="POST">
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
 
-    <input type="text" name="roblox_username" placeholder="Your Roblox Username" required><br>
+      <input type="text" name="roblox_username" placeholder="Your Roblox Username" required>
 
-    <textarea name="ugc_file" placeholder="Paste your UGC file here..." required></textarea><br>
+      <textarea name="ugc_file" placeholder="Paste your UGC file here..." required></textarea>
 
-    <button type="submit">Submit </button>
+      <button type="submit">Submit</button>
 
-  </form>
+    </form>
+
+    <div class="footer">
+      Powered by S4NTY 💻
+    </div>
+  </div>
 
 </body>
 </html>
