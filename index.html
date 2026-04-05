@@ -183,35 +183,41 @@
 </div>
 
 <!-- PARTICLES SCRIPT -->
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
-particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 90 },
-    "color": { "value": "#4CAF50" },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.5 },
-    "size": { "value": 3 },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#4CAF50",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 3
-    }
-  },
-  "interactivity": {
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "repulse"
+window.addEventListener("load", function () {
+  if (typeof particlesJS !== "undefined") {
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 100 },
+        color: { value: "#4CAF50" },
+        shape: { type: "circle" },
+        opacity: { value: 0.6 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 140,
+          color: "#4CAF50",
+          opacity: 0.5,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          }
+        }
       }
-    }
+    });
+  } else {
+    console.log("Particles.js failed to load 😭");
   }
 });
 </script>
