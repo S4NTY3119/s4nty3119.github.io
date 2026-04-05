@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> GetYourUGC </title>
+  <title>GetYourUGC</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      color: #aaa;
+    }
+
+    input, textarea {
+      width: 300px;
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #1e1e1e;
+      color: white;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
 </head>
-<body style="background-color:#121212; color:white; text-align:center; font-family:sans-serif;">
 
-  <h1> </h1>GetYourUGC </h1>
-  <p> Submit your UGC below </p>
+<body>
 
-  <input type="text" placeholder="Your Roblox Username"><br><br>
+  <h1>GetYourUGC 🚀</h1>
+  <p>Submit your UGC file below!</p>
 
-  <textarea placeholder="Paste your UGC file here..." rows="6"></textarea><br><br>
+  <form action="https://formspree.io/f/mkoppawp" method="POST">
 
-  <button onclick="alert('Submission feature coming soon 😎')">
-    Submit 
-  </button>
+    <input type="text" name="roblox_username" placeholder="Your Roblox Username" required><br>
+
+    <textarea name="ugc_file" placeholder="Paste your UGC file here..." required></textarea><br>
+
+    <button type="submit">Submit </button>
+
+  </form>
 
 </body>
 </html>
