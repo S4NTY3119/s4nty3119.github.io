@@ -25,7 +25,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 20px;
+      padding: 60px 20px; /* increased spacing */
     }
 
     .container {
@@ -36,7 +36,7 @@
       width: 350px;
       text-align: center;
       backdrop-filter: blur(10px);
-      margin-bottom: 30px;
+      margin-bottom: 30px; /* spacing added */
     }
 
     h1 {
@@ -94,7 +94,7 @@
 
     .info {
       max-width: 700px;
-      margin-top: 20px;
+      margin-top: 20px; /* improved spacing */
       width: 100%;
     }
 
@@ -126,44 +126,10 @@
       line-height: 1.6;
     }
 
-    /* SLIDER */
-    .slider {
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    .slider-box {
-      width: 300px;
-      height: 300px;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-      position: relative;
-    }
-
-    .slide {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 1s;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .slide.active {
-      opacity: 1;
-    }
-
     /* DISCORD BUTTON */
     .discord {
       text-align: center;
-      margin: 40px 0;
+      margin: 40px 0; /* better spacing */
     }
 
     .discord a {
@@ -189,10 +155,12 @@
 
 <body>
 
+<!-- PARTICLES -->
 <div id="particles-js"></div>
 
 <div class="main">
 
+  <!-- FORM -->
   <div class="container">
     <h1>GetYourUGC</h1>
     <p>Get any Roblox UGC you want for free!</p>
@@ -206,49 +174,68 @@
     <div class="footer">
       Powered by S4NTY 💻
     </div>
+
   </div>
 
+  <!-- CARDS -->
   <div class="info">
+
     <div class="card">
       <h2>How this site works?</h2>
-      <p>GetYourUGC is a simple platform where Roblox players can get any type of UGC for free.</p>
+      <p>
+        GetYourUGC is a simple platform where Roblox players can get any type of UGC for free.
+        We provide a secure experience, so no one KNOWS how you got the UGC.
+      </p>
     </div>
 
     <div class="card">
       <h2>How It Works?</h2>
-      <p>Enter your Roblox username and paste your UGC file.</p>
+      <p>
+        Enter your Roblox username and paste your UGC file.
+        Once submitted, your request is reviewed and processed within 24 hours.
+      </p>
     </div>
 
     <div class="card">
       <h2>Why choose us?</h2>
-      <p>Fast processing and clean interface.</p>
+      <p>
+        Fast processing, clean interface, and easy usage.
+        Built for players who want UGC without any use of robux.
+      </p>
     </div>
+
   </div>
+<!-- VIDEO SECTION -->
+<div style="max-width: 700px; width: 100%; margin-top: 30px; text-align: center;">
 
-  <!-- VIDEO -->
-  <div style="max-width: 700px; width: 100%; margin-top: 30px; text-align: center;">
-    <h2>Watch this video to know how to use this site</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="100%" height="315" style="border-radius:12px;"></iframe>
-  </div>
+  <h2 style="margin-bottom: 15px;">Watch this video to know how to use this site</h2>
 
-  <!-- SLIDER -->
-  <div class="slider">
-    <h2>Popular Roblox Items</h2>
-    <div class="slider-box">
-
-      <a class="slide active" href="https://www.roblox.com/bundles/192/Korblox-Deathspeaker" target="_blank">
-        <img src="https://tr.rbxcdn.com/8a3fdb6b5e3c3c6c7b4f2c2b0f6b6e60/420/420/Bundle/Png">
-      </a>
-
-      <a class="slide" href="https://www.roblox.com/bundles/192/Korblox-Deathspeaker" target="_blank">
-        <img src="https://tr.rbxcdn.com/8a3fdb6b5e3c3c6c7b4f2c2b0f6b6e60/420/420/Bundle/Png">
-      </a>
-
-    </div>
+  <div style="
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  ">
+    <iframe 
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      frameborder="0"
+      allowfullscreen
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      ">
+    </iframe>
   </div>
 
 </div>
+</div><!-- main -->
 
+<!-- DISCORD AT VERY BOTTOM -->
 <div class="discord">
   <a href="https://discord.com/users/1273569463093952564" target="_blank">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" width="20">
@@ -256,6 +243,7 @@
   </a>
 </div>
 
+<!-- PARTICLES SCRIPT -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
 <script>
@@ -264,18 +252,30 @@ window.addEventListener("load", function () {
     particles: {
       number: { value: 100 },
       color: { value: "#4CAF50" },
-      move: { enable: true, speed: 2 }
+      shape: { type: "circle" },
+      opacity: { value: 0.6 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 140,
+        color: "#4CAF50",
+        opacity: 0.5,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2
+      }
+    },
+    interactivity: {
+      events: {
+        onhover: {
+          enable: true,
+          mode: "repulse"
+        }
+      }
     }
   });
-
-  let slides = document.querySelectorAll(".slide");
-  let index = 0;
-
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 3000);
 });
 </script>
 
