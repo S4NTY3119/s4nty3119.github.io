@@ -153,10 +153,11 @@
       margin: 40px 0;
     }
 
+    /* ✅ Discord changed to green */
     .discord a {
       color: white;
       text-decoration: none;
-      background: #5865F2;
+      background: #2ecc71; /* green */
       padding: 12px 18px;
       border-radius: 10px;
       display: inline-flex;
@@ -167,7 +168,7 @@
     }
 
     .discord a:hover {
-      background: #4752c4;
+      background: #27ae60; /* darker green hover */
       transform: scale(1.05);
     }
 
@@ -180,21 +181,16 @@
       transition: 0.25s;
     }
 
+    /* 🟢 Roblox subtle green glow */
     .roblox a:hover img {
       transform: scale(1.15);
       box-shadow: 0 0 6px #4CAF50;
     }
 
+    /* 🟢 Discord subtle green glow */
     .discord a:hover img {
       transform: scale(1.15);
-      box-shadow: 0 0 6px #5865F2;
-    }
-
-    /* 🔥 NEW: icons under video */
-    .video-links {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 15px;
+      box-shadow: 0 0 6px #2ecc71;
     }
 
   </style>
@@ -241,26 +237,22 @@
   <div style="max-width: 700px; width: 100%; margin-top: 30px; text-align: center;">
     <h2>Watch this video to know how to use this site</h2>
     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="100%" height="315" style="border-radius:12px;"></iframe>
-
-    <!-- ✅ FIXED LINKS UNDER VIDEO -->
-    <div class="video-links">
-      <div class="roblox">
-        <a href="https://www.roblox.com/users/5715215513/profile" target="_blank">
-          <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5715215513&width=48&height=48&format=png">
-          Visit my Roblox Profile
-        </a>
-      </div>
-
-      <div class="discord">
-        <a href="https://discord.com/users/1273569463093952564" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
-          Contact me on Discord
-        </a>
-      </div>
-    </div>
-
   </div>
 
+ <div class="roblox">
+  <a href="https://www.roblox.com/users/5715215513/profile" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968763.png">
+    Visit my Roblox Profile
+  </a>
+</div>
+
+</div>
+
+<div class="discord">
+  <a href="https://discord.com/users/1273569463093952564" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
+    Contact me on Discord
+  </a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
