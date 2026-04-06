@@ -4,9 +4,6 @@
   <link rel="icon" type="image/png" href="https://i.imgur.com/jV8cqA6.png">
   <title>GetYourUGC</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://i.imgur.com/jV8cqA6.png">
-
   <style>
     body {
       margin: 0;
@@ -42,17 +39,15 @@
       margin-bottom: 30px;
     }
 
+    /* Header image above h1 */
+    .header-image {
+      width: 120px;   /* adjust size */
+      margin-bottom: 15px;
+    }
+
     h1 {
       margin-bottom: 10px;
       font-size: 28px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    h1 img {
-      height: 40px;
     }
 
     p {
@@ -194,10 +189,9 @@
 <div class="main">
 
   <div class="container">
-    <h1>
-      <img src="https://i.imgur.com/jV8cqA6.png" alt="Logo">
-      GetYourUGC
-    </h1>
+    <!-- Image on top of h1 -->
+    <img src="https://i.imgur.com/jV8cqA6.png" alt="Header Image" class="header-image">
+    <h1>GetYourUGC</h1>
     <p>Get any Roblox UGC you want for free!</p>
 
     <form action="https://formspree.io/f/mkoppawp" method="POST">
