@@ -25,6 +25,7 @@
       flex-direction: column;
       align-items: center;
       padding: 60px 20px;
+      position: relative;
     }
 
     .container {
@@ -125,71 +126,43 @@
       line-height: 1.6;
     }
 
-    .roblox {
-      text-align: center;
-      margin: 30px 0;
+    iframe {
+      border-radius: 12px;
+      position: relative;
     }
 
-    .roblox a {
-      color: white;
-      text-decoration: none;
-      background: #ff4757;
-      padding: 12px 18px;
-      border-radius: 10px;
-      display: inline-flex;
+    /* 🔥 Fixed corner icons */
+    .fixed-icon {
+      position: absolute;
+      bottom: 10px;
+      display: flex;
       align-items: center;
-      gap: 10px;
-      transition: 0.3s;
+      gap: 8px;
       font-size: 14px;
     }
 
-    .roblox a:hover {
-      background: #e84118;
-      transform: scale(1.05);
+    .left-bottom { left: 10px; }
+    .right-bottom { right: 10px; }
+
+    .fixed-icon img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #4CAF50, 0 0 15px #4CAF50;
+      transition: 0.3s;
     }
 
-    .discord {
-      text-align: center;
-      margin: 40px 0;
+    .fixed-icon a:hover img {
+      transform: scale(1.2);
+      box-shadow: 0 0 12px #00ffcc, 0 0 25px #00ffcc;
     }
 
-    .discord a {
+    .fixed-icon a {
       color: white;
       text-decoration: none;
-      background: #5865F2;
-      padding: 12px 18px;
-      border-radius: 10px;
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 10px;
-      transition: 0.3s;
-      font-size: 14px;
-    }
-
-    .discord a:hover {
-      background: #4752c4;
-      transform: scale(1.05);
-    }
-
-    /* ✅ CLEAN ICON STYLE (FIXED) */
-    .roblox img,
-    .discord img {
-      width: 20px;
-      height: 20px;
-      border-radius: 4px;
-      transition: 0.25s;
-    }
-
-    /* 🟢 Roblox subtle green glow */
-    .roblox a:hover img {
-      transform: scale(1.15);
-      box-shadow: 0 0 6px #4CAF50;
-    }
-
-    /* 🔵 Discord subtle blue glow */
-    .discord a:hover img {
-      transform: scale(1.15);
-      box-shadow: 0 0 6px #5865F2;
+      gap: 8px;
     }
 
   </style>
@@ -235,23 +208,25 @@
 
   <div style="max-width: 700px; width: 100%; margin-top: 30px; text-align: center;">
     <h2>Watch this video to know how to use this site</h2>
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="100%" height="315" style="border-radius:12px;"></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="100%" height="315"></iframe>
+
+    <!-- 🔹 Roblox bottom-left -->
+    <div class="fixed-icon left-bottom">
+      <a href="https://www.roblox.com/users/5715215513/profile" target="_blank">
+        <img src="https://www.roblox.com/headshot-thumbnail/image?userId=5715215513&width=48&height=48&format=png">
+        Visit my Roblox Profile
+      </a>
+    </div>
+
+    <!-- 🔹 Discord bottom-right -->
+    <div class="fixed-icon right-bottom">
+      <a href="https://discord.com/users/1273569463093952564" target="_blank">
+        <img src="https://cdn.discordapp.com/icons/1273569463093952564/a_6c9b3e2d0c0f1e7f0f3f1c2e3b4a5d6f.png?size=48">
+        Contact me on Discord
+      </a>
+    </div>
   </div>
 
- <div class="roblox">
-  <a href="https://www.roblox.com/users/5715215513/profile" target="_blank">
-   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968763.png">
-    Visit my Roblox Profile
-  </a>
-</div>
-
-</div>
-
-<div class="discord">
-  <a href="https://discord.com/users/1273569463093952564" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png">
-    Contact me on Discord
-  </a>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -288,9 +263,7 @@ window.addEventListener("load", function () {
       modes: {
         grab: {
           distance: 140,
-          line_linked: {
-            opacity: 0.8
-          }
+          line_linked: { opacity: 0.8 }
         }
       }
     },
